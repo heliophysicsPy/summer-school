@@ -23,7 +23,6 @@
     - LASCO C2
     - EUI
     - EPD (timeseries, need to figure out which measurements are interesting here, if any; even if not, maybe just good to show that we can look at timeseries data from SolO)
-    - PSP (if available? would be good to have additional timeseries data)
   * Show off features of Fido
   * Construct simple queries (one image, one instrument for a time range)
   * Move to multi-instrument queries (maybe include HEK to show off metadata handling?)
