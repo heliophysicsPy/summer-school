@@ -5,6 +5,8 @@ dependencies:
 - python=3.9  # The scikit-image binaries do not exist for anything beyond 3.9 yet
 # For simplicity, I'm managing everything through pip.
 # Resolving dependencies via pip is also much faster
+- pip
+- graphviz
 - pip:
   - ipykernel
   - sunpy[all]
@@ -13,3 +15,4 @@ dependencies:
   - pfsspy[performance]
   - sunkit-image
   - sunpy-soar
+  - ipywidgets
