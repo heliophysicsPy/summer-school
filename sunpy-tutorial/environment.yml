@@ -12,3 +12,4 @@ dependencies:
   - aiapy
   - pfsspy[performance]
   - sunkit-image
+  - sunpy-soar
