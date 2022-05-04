@@ -1,0 +1,13 @@
+name: vires-tutorial
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - pip
+  - ipykernel
+  - ipywidgets
+  - matplotlib
+  - pip:
+    - viresclient
+    - hapiclient
+    - hapiplot
