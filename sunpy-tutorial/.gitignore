@@ -1,4 +1,8 @@
 # Custom
+old-tutorials/
+data/
+*.nc
+*.fts
 *.fits
 
 # Byte-compiled / optimized / DLL files
