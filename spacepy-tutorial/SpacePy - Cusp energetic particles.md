@@ -86,7 +86,7 @@ location = spacepy.coordinates.Coords(location, system, 'car', use_irbem=False)
 ticks = spacepy.time.Ticktock([datetime.datetime(2000, 4, 6)] * len(location))
 # Calculate magnetic field across the domain at this time
 # TRY: Other options: OPDYN, T89, T05
-b = spacepy.irbempy.get_Bfield(ticks, location, extMag='T05')
+b = spacepy.irbempy.get_Bfield(ticks, location, extMag='T96')
 b_mag, b_vec = b['Blocal'], b['Bvec']
 # Magnetic field is given in GEO; since this is a simple rotation,
 # can directly convert
@@ -213,6 +213,8 @@ Although this has fine output, temporary data arrays are left hanging around. Th
 We'll similarly do cleanup of temporaries throughout the rest of this notebook.
 
 Note that, for example, the `tracex` and `tracez` variables are continually redefined when looping over field lines--each instance is automatically garbage collected when redefined, so there's no need to explicitly delete them.
+
+*Questions at this point?*
 
 ```python
 del b_vec, b_hat, b_mag, x, z, tracex, tracez
@@ -388,6 +390,9 @@ The minimum is somewhat obscured by storm-to-storm variability in the length of 
 
 Although the onsets are all that are used in the final analysis, the superposed epoch plot gives confidence in the storm identification.
 
+#### Things to try
+Increase/decrease window size and resolution (delta)
+
 ```python
 import spacepy.seapy
 
@@ -399,6 +404,9 @@ superposed.sea()
 superposed.plot(xquan='Time since onset (days)', yquan='USGS Dst* (nT)',
                 transparent=False, color='#ABABFF', epochline=True)
 ```
+
+*Questions at this point?*
+
 
 ### Substorm onsets
 One characteristic of a substorm onset is a dipolarization in the tail, where the "stretched" field lines move Earthward. This results in both betatron acceleration and second-order Fermi acceleration. The dipolarization can be observed by a change in the elevation angle of the magnetic field observed at GOES. This was, again, done in IDL before the previous study, and the data saved in IDL.
@@ -426,9 +434,15 @@ substorm_times = substorm_times[idx]
 
 Association Analysis
 ------------------------------
-We now have four lists of times: times when Polar was in the cusp, when Polar observed CEPs, dipolarization onsets, and storm onsets. We wish to know if there are any associations between these events which may imply causality, e.g., are energetic particles more likely to be observed after substorm onsets? This technique is describe in detail in [Niehof and Morley, 2012](https://doi.org/10.2172/1035497) and implemented in the [PoPPy module](https://spacepy.github.io/poppy.html).
+We now have four lists of times: times when Polar was in the cusp, when Polar observed CEPs, dipolarization onsets, and storm onsets. We wish to know if there are any associations between these events which may imply causality, e.g., are energetic particles more likely to be observed after substorm onsets? This technique is described in detail in [Niehof and Morley, 2012](https://doi.org/10.2172/1035497) and implemented in the [PoPPy module](https://spacepy.github.io/poppy.html).
 
-The simplest question might be, for instance, how many CEP observations happen at the same time as a dipolarization event? Obviously this makes more sense in terms of, say a window, e.g. how many CEP observations happen within half an hour of a dipolarization onset? Finally, we might expect there to be some time lag in one direction or another, so the question becomes, for each of a set of times, how many CEP observations happen within a given window of that time away from a dipolarization onset?
+Consider two different series of events, each event occurring at a particular time. This might be, for instance, CEP observations and dipolarization onsets. Call these series A and series B, consisting of individual events e.g. a<sub>0</sub>, a<sub>1</sub>; b<sub>0</sub> etc. We could ask how many events in series B occur *at the same time* as events in series A. More reasonably, we might expect events that are most-or-less simultaneous to occur within a certain half-window, *h*, of each other. So in the example figure below, two events in series B occur within the half-window of a<sub>0</sub>, and we say the 0th association for series A is 2. Summing over all associations for a series gives the *association number*. Note that, after this summing, the result is symmetric. A higher association number indicates series that are more strongly associated.
+
+![Example of association between two processes](series_example.svg)
+
+We further want to identify associations between events that occur with some separation in time (e.g. perhaps events in series A regularly occur a short time before those in series B, but potentially outside the half-window *h*, so this sort of analysis is repeated with all the times for one series offset by a lag *u* relative to the other series. In the example, the lag shown has decreased the association; in general, the association number is a function of lag.
+
+The question can be framed as this: for each of a set of times (lags), how many CEP observations happen within a given window of that time away from a dipolarization onset?
 
 Depending on its energy, an ion would take approximately 15-120 minutes to gradient-curvature drift from the tail to the dayside. We thus choose 30 minutes as the window half-size for association.
 
@@ -436,8 +450,8 @@ Depending on its energy, an ion would take approximately 15-120 minutes to gradi
 ```python
 import spacepy.poppy
 
-# Calculate for +/-5 days at 5min resolution, doing everything in seconds
-lags = list(range(-5 * 60 * 60 * 24, 5 * 60 * 60 * 24 + 1, 5 * 60))
+# Calculate for +/-3 days at 5min resolution, doing everything in seconds
+lags = list(range(-3 * 60 * 60 * 24, 3 * 60 * 60 * 24 + 1, 5 * 60))
 pop = spacepy.poppy.PPro(substorm_times, cep_times, lags=lags, winhalf=30 * 60.)
 pop.assoc()
 # xscale: convert the seconds in the data to hours on the axis
@@ -448,9 +462,12 @@ At very large lags, the expectation is that any association would be broken. The
 
 Confidence intervals on the association number can be calculated using the bootstrap, which repeatedly resamples the series of individual associations (with replacement) to estimate population statistics from the sample. This can be very computationally expensive, as it essentially involves repeating the association analysis thousands of times. This is performed in C and multithreaded for speed. For this tutorial, we use a smaller number of resamplings for speed, which may slightly reduce the accuracy of the confidence interval.
 
+#### Things to try
+Use a very small number of surrogates (e.g., 10). Use a different CI range (e.g., 60%)
+
 ```python
-# Build 95% confidence interval with 200 resamplings
-pop.aa_ci(95, n_boots=200)
+# Build 95% confidence interval with 100 surrogates
+pop.aa_ci(95, n_boots=100)
 pop.plot(norm=False, xlabel='Time lag (hours)', ylabel='Association number', xscale=3600.)
 ```
 
@@ -459,11 +476,14 @@ This looks like a significant association of CEPs with substorm onsets, with the
 ```python
 pop_cusp = spacepy.poppy.PPro(substorm_times, cusp_times, lags=lags, winhalf=30 * 60.)
 pop_cusp.assoc()
-pop_cusp.aa_ci(95, n_boots=200)
+pop_cusp.aa_ci(95, n_boots=100)
 pop_cusp.plot(norm=False, xlabel='Time lag (hours)', ylabel='Association number', xscale=3600.)
 ```
 
 There are definitely some similarities. So the point of interest is whether energetic particles are *more* associated with dipolarizations than the cusp. That is the purpose of the [plot_two_ppro](https://spacepy.github.io/autosummary/spacepy.poppy.plot_two_ppro.html#spacepy.poppy.plot_two_ppro) function, which will plot two `PPro` objects normalized to one of them, to look for non-overlapping confidence intervals.
+
+#### Things to try
+Plot without normalization, to see the separate cusp and CEP associations.
 
 ```python
 spacepy.poppy.plot_two_ppro(pop, pop_cusp, norm=True, xscale=3600, dpi=150)
@@ -477,11 +497,32 @@ We can perform a similar analysis for storm onsets.
 storm_times = to_seconds(onsets)
 pop = spacepy.poppy.PPro(storm_times, cep_times, lags=lags, winhalf=30 * 60.)
 pop.assoc()
-pop.aa_ci(95, n_boots=200)
+pop.aa_ci(95, n_boots=100)
 pop_cusp = spacepy.poppy.PPro(storm_times, cusp_times, lags=lags, winhalf=30 * 60.)
 pop_cusp.assoc()
-pop_cusp.aa_ci(95, n_boots=200)
+pop_cusp.aa_ci(95, n_boots=100)
 spacepy.poppy.plot_two_ppro(pop, pop_cusp, norm=True, xscale=3600, dpi=150)
 ```
 
+<!-- #region -->
 This shows pretty clearly that there is no association between CEP observations and geomagnetic storm onsets, suggesting that CEPs cannot be a major and direct driver of the ring current.
+
+#### Things to try
+Examine the association between storm onsets and substorm onsets.
+
+<details>
+    <summary>(Click for one answer)</summary>
+
+<p>
+
+```python
+pop = spacepy.poppy.PPro(storm_times, substorm_times, lags=lags, winhalf=30 * 60.)
+pop.assoc()
+pop.aa_ci(95, n_boots=100)
+pop.plot(norm=False, xlabel='Time lag (hours)', ylabel='Association number', xscale=3600.)
+```
+
+</p>
+</details>
+
+<!-- #endregion -->
