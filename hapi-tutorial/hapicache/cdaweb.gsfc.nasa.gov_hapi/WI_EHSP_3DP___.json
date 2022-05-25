@@ -1,0 +1,69 @@
+{
+    "HAPI": "2.0",
+    "status": {
+        "code": 1200,
+        "message": "OK"
+    },
+    "parameters": [
+        {
+            "name": "Time",
+            "type": "isotime",
+            "units": "UTC",
+            "length": 24,
+            "fill": null
+        },
+        {
+            "name": "FLUX",
+            "type": "double",
+            "units": "#/cm2-ster-sec-eV",
+            "fill": "-1.0E31",
+            "description": "Electron differential number flux 100 eV - 30 keV, as a function of energy [spectrogram] ",
+            "size": [
+                15
+            ]
+        },
+        {
+            "name": "FLUX_STACKED",
+            "type": "double",
+            "units": "#/cm2-ster-sec-eV",
+            "fill": "-1.0E31",
+            "description": "---> As stacked plot",
+            "size": [
+                15
+            ]
+        },
+        {
+            "name": "FLUX_SIMPLE",
+            "type": "double",
+            "units": "#/cm2-ster-sec-eV",
+            "fill": "-1.0E31",
+            "description": "---> As time series",
+            "size": [
+                15
+            ]
+        },
+        {
+            "name": "ENERGY",
+            "type": "double",
+            "units": "eV ",
+            "fill": "-1.0E31",
+            "description": "---> Time-varying electron energies for 15 channels",
+            "size": [
+                15
+            ]
+        },
+        {
+            "name": "TIME",
+            "type": "double",
+            "units": "sec",
+            "fill": "NaN",
+            "description": "UNIX Time (secs since 1 Jan 1970)"
+        }
+    ],
+    "startDate": "1994-12-20T15:10:03Z",
+    "stopDate": "2022-04-27T23:59:16Z",
+    "resourceURL": "https://cdaweb.gsfc.nasa.gov/misc/NotesW.html#WI_EHSP_3DP",
+    "contact": "R. Lin/S. Bale @ UC Berkeley",
+    "x_server": "https://cdaweb.gsfc.nasa.gov/hapi",
+    "x_dataset": "WI_EHSP_3DP"
+}

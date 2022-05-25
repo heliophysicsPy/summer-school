@@ -1,0 +1,551 @@
+{
+    "HAPI": "2.0",
+    "status": {
+        "code": 1200,
+        "message": "OK"
+    },
+    "parameters": [
+        {
+            "name": "Time",
+            "type": "isotime",
+            "units": "UTC",
+            "length": 24,
+            "fill": null
+        },
+        {
+            "name": "thb_psef_data_quality",
+            "type": "integer",
+            "units": "0=good",
+            "fill": "-2147483648",
+            "description": "SST Full Mode Electron Moment Data Quality (0: Good data, non-zero: Data may not be suitable, see: http://themis.ssl.berkeley.edu/sst_flag.shtml.) "
+        },
+        {
+            "name": "thb_psef_en_efluxQ",
+            "type": "double",
+            "units": "eV/(cm^2-s-sr-eV)",
+            "fill": "NaN",
+            "description": "SST Electron energy spectrogram(Good data only)",
+            "size": [
+                16
+            ]
+        },
+        {
+            "name": "thb_psef_densityQ",
+            "type": "double",
+            "units": "cm^-3",
+            "fill": "NaN",
+            "description": "SST full mode derived electron density(Good data only)"
+        },
+        {
+            "name": "thb_psef_avgtempQ",
+            "type": "double",
+            "units": "eV",
+            "fill": "NaN",
+            "description": "SST full mode derived average electron temperature(Good data only)"
+        },
+        {
+            "name": "thb_psef_vthermalQ",
+            "type": "double",
+            "units": "km/s",
+            "fill": "NaN",
+            "description": "SST full mode derived average electron thermal velocity(Good data only)"
+        },
+        {
+            "name": "thb_psef_sc_potQ",
+            "type": "double",
+            "units": "V",
+            "fill": "NaN",
+            "description": "Spacecraft potential used in generation of thb_psef moments(Good data only)"
+        },
+        {
+            "name": "thb_psef_t3Q",
+            "type": "double",
+            "units": "eV",
+            "fill": "NaN",
+            "description": "SST full mode electron diagonalized temperature (Tprp1, Tprp2, Tpar)(Good data only)",
+            "size": [
+                3
+            ],
+            "bins": [
+                {
+                    "name": "thb_psef_t3_compno",
+                    "units": null,
+                    "centers": [
+                        1,
+                        2,
+                        3
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "thb_psef_magt3Q",
+            "type": "double",
+            "units": "eV",
+            "fill": "NaN",
+            "description": "SST full mode electron temperature temperature magnetic field aligned. (Tprp1FA, Tprp2FA, TparFA)(Good data only)",
+            "size": [
+                3
+            ],
+            "bins": [
+                {
+                    "name": "thb_psef_magt3_compno",
+                    "units": null,
+                    "centers": [
+                        1,
+                        2,
+                        3
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "thb_psef_ptensQ",
+            "type": "double",
+            "units": "eV/cm^3",
+            "fill": "NaN",
+            "description": "SST full distribution derived electron pressure tensor(Good data only)",
+            "size": [
+                6
+            ],
+            "bins": [
+                {
+                    "name": "thb_psef_ptens_compno",
+                    "units": null,
+                    "centers": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "thb_psef_mftensQ",
+            "type": "double",
+            "units": "eV/cm^3",
+            "fill": "NaN",
+            "description": "SST full distribution derived electron momentum flux tensor(Good data only)",
+            "size": [
+                6
+            ],
+            "bins": [
+                {
+                    "name": "thb_psef_mftens_compno",
+                    "units": null,
+                    "centers": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "thb_psef_fluxQ",
+            "type": "double",
+            "units": "#/(cm^2-s)",
+            "fill": "NaN",
+            "description": "SST full mode electron particle flux vector(Good data only)",
+            "size": [
+                3
+            ],
+            "bins": [
+                {
+                    "name": "thb_psef_flux_compno",
+                    "units": null,
+                    "centers": [
+                        3,
+                        3,
+                        3
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "thb_psef_symmQ",
+            "type": "double",
+            "units": "None",
+            "fill": "NaN",
+            "description": "SST full mode electron direction of pressure tensor symmetry. In DSL Coordinates(Good data only)",
+            "size": [
+                3
+            ],
+            "bins": [
+                {
+                    "name": "thb_psef_symm_compno",
+                    "units": null,
+                    "centers": [
+                        1,
+                        2,
+                        3
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "thb_psef_symm_angQ",
+            "type": "double",
+            "units": "degrees",
+            "fill": "NaN",
+            "description": "SST full distribution derived electron symmetry angle (Angle between Symmetry Direction and Magnetic Field(B))(Good data only)"
+        },
+        {
+            "name": "thb_psef_magfQ",
+            "type": "double",
+            "units": "nT",
+            "fill": "NaN",
+            "description": "Magnetic field vector used for generation of psef moments in DSL coordinates(Good data only)",
+            "size": [
+                3
+            ],
+            "bins": [
+                {
+                    "name": "thb_psef_magf_compno",
+                    "units": null,
+                    "centers": [
+                        1,
+                        2,
+                        3
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "thb_psef_velocity_dslQ",
+            "type": "double",
+            "units": "km/s",
+            "fill": "NaN",
+            "description": "SST full distribution derived electron velocity vector in DSL coordinates(Good data only)",
+            "size": [
+                3
+            ],
+            "bins": [
+                {
+                    "name": "thb_psef_velocity_dsl_compno",
+                    "units": null,
+                    "centers": [
+                        1,
+                        2,
+                        3
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "thb_psef_velocity_gseQ",
+            "type": "double",
+            "units": "km/s",
+            "fill": "NaN",
+            "description": "SST full distribution derived electron velocity vector in GSE coordinates(Good data only)",
+            "size": [
+                3
+            ],
+            "bins": [
+                {
+                    "name": "thb_psef_velocity_gse_compno",
+                    "units": null,
+                    "centers": [
+                        1,
+                        2,
+                        3
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "thb_psef_velocity_gsmQ",
+            "type": "double",
+            "units": "km/s",
+            "fill": "NaN",
+            "description": "SST full distribution derived electron velocity vector in GSM coordinates(Good data only)",
+            "size": [
+                3
+            ],
+            "bins": [
+                {
+                    "name": "thb_psef_velocity_gsm_compno",
+                    "units": null,
+                    "centers": [
+                        1,
+                        2,
+                        3
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "thb_psef_en_eflux",
+            "type": "double",
+            "units": "eV/(cm^2-s-sr-eV) (All Qs)",
+            "fill": "NaN",
+            "description": "SST Electron energy spectrogram(Full Mode)(All qualities)",
+            "size": [
+                16
+            ]
+        },
+        {
+            "name": "thb_psef_density",
+            "type": "double",
+            "units": "cm^-3 (All Qs)",
+            "fill": "NaN",
+            "description": "SST full mode derived electron density(All qualities)"
+        },
+        {
+            "name": "thb_psef_avgtemp",
+            "type": "double",
+            "units": "eV (All Qs)",
+            "fill": "NaN",
+            "description": "SST full mode derived average electron temperature(All qualities)"
+        },
+        {
+            "name": "thb_psef_vthermal",
+            "type": "double",
+            "units": "km/s (All Qs)",
+            "fill": "NaN",
+            "description": "SST full mode derived average electron thermal velocity(All qualities)"
+        },
+        {
+            "name": "thb_psef_sc_pot",
+            "type": "double",
+            "units": "V (All Qs)",
+            "fill": "NaN",
+            "description": "Spacecraft potential used in generation of thb_psef moments(All qualities)"
+        },
+        {
+            "name": "thb_psef_t3",
+            "type": "double",
+            "units": "eV (All Qs)",
+            "fill": "NaN",
+            "description": "SST full mode electron diagonalized temperature (Tprp1, Tprp2, Tpar)(All qualities)",
+            "size": [
+                3
+            ],
+            "bins": [
+                {
+                    "name": "thb_psef_t3_compno",
+                    "units": null,
+                    "centers": [
+                        1,
+                        2,
+                        3
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "thb_psef_magt3",
+            "type": "double",
+            "units": "eV (All Qs)",
+            "fill": "NaN",
+            "description": "SST full mode electron temperature temperature magnetic field aligned. (Tprp1FA, Tprp2FA, TparFA)(All qualities)",
+            "size": [
+                3
+            ],
+            "bins": [
+                {
+                    "name": "thb_psef_magt3_compno",
+                    "units": null,
+                    "centers": [
+                        1,
+                        2,
+                        3
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "thb_psef_ptens",
+            "type": "double",
+            "units": "eV/cm^3 (All Qs)",
+            "fill": "NaN",
+            "description": "SST full distribution derived electron pressure tensor(All qualities)",
+            "size": [
+                6
+            ],
+            "bins": [
+                {
+                    "name": "thb_psef_ptens_compno",
+                    "units": null,
+                    "centers": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "thb_psef_mftens",
+            "type": "double",
+            "units": "eV/cm^3 (All Qs)",
+            "fill": "NaN",
+            "description": "SST full distribution derived electron momentum flux tensor(All qualities)",
+            "size": [
+                6
+            ],
+            "bins": [
+                {
+                    "name": "thb_psef_mftens_compno",
+                    "units": null,
+                    "centers": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "thb_psef_flux",
+            "type": "double",
+            "units": "#/(cm^2-s) (All Qs)",
+            "fill": "NaN",
+            "description": "SST full mode electron particle flux vector(All qualities)",
+            "size": [
+                3
+            ],
+            "bins": [
+                {
+                    "name": "thb_psef_flux_compno",
+                    "units": null,
+                    "centers": [
+                        3,
+                        3,
+                        3
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "thb_psef_symm",
+            "type": "double",
+            "units": "None (All Qs)",
+            "fill": "NaN",
+            "description": "SST full mode electron direction of pressure tensor symmetry. In DSL Coordinates(All qualities)",
+            "size": [
+                3
+            ],
+            "bins": [
+                {
+                    "name": "thb_psef_symm_compno",
+                    "units": null,
+                    "centers": [
+                        1,
+                        2,
+                        3
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "thb_psef_symm_ang",
+            "type": "double",
+            "units": "degrees (All Qs)",
+            "fill": "NaN",
+            "description": "SST full distribution derived electron symmetry angle (Angle between Symmetry Direction and Magnetic Field(B))(All qualities)"
+        },
+        {
+            "name": "thb_psef_magf",
+            "type": "double",
+            "units": "nT (All Qs)",
+            "fill": "NaN",
+            "description": "Magnetic field vector used for generation of psef moments in DSL coordinates(All Qualities)",
+            "size": [
+                3
+            ],
+            "bins": [
+                {
+                    "name": "thb_psef_magf_compno",
+                    "units": null,
+                    "centers": [
+                        1,
+                        2,
+                        3
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "thb_psef_velocity_dsl",
+            "type": "double",
+            "units": "km/s (All Qs)",
+            "fill": "NaN",
+            "description": "SST full distribution derived electron velocity vector in DSL coordinates(All Qualities)",
+            "size": [
+                3
+            ],
+            "bins": [
+                {
+                    "name": "thb_psef_velocity_dsl_compno",
+                    "units": null,
+                    "centers": [
+                        1,
+                        2,
+                        3
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "thb_psef_velocity_gse",
+            "type": "double",
+            "units": "km/s (All Qs)",
+            "fill": "NaN",
+            "description": "SST full distribution derived electron velocity vector in GSE coordinates(All Qualities)",
+            "size": [
+                3
+            ],
+            "bins": [
+                {
+                    "name": "thb_psef_velocity_gse_compno",
+                    "units": null,
+                    "centers": [
+                        1,
+                        2,
+                        3
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "thb_psef_velocity_gsm",
+            "type": "double",
+            "units": "km/s (All Qs)",
+            "fill": "NaN",
+            "description": "SST full distribution derived electron velocity vector in GSM coordinates(All Qualities)",
+            "size": [
+                3
+            ],
+            "bins": [
+                {
+                    "name": "thb_psef_velocity_gsm_compno",
+                    "units": null,
+                    "centers": [
+                        1,
+                        2,
+                        3
+                    ]
+                }
+            ]
+        }
+    ],
+    "startDate": "2007-03-09T00:00:00Z",
+    "stopDate": "2022-05-23T00:00:00Z",
+    "resourceURL": "https://cdaweb.gsfc.nasa.gov/misc/NotesT.html#THB_L2_SST",
+    "contact": "V. Angelopoulos, D. Larson & R.P. Lin @ UCB, NASA NAS5-02099",
+    "x_server": "https://cdaweb.gsfc.nasa.gov/hapi",
+    "x_dataset": "THB_L2_SST@1"
+}

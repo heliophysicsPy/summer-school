@@ -1,0 +1,76 @@
+{
+    "HAPI": "2.0",
+    "status": {
+        "code": 1200,
+        "message": "OK"
+    },
+    "parameters": [
+        {
+            "name": "Time",
+            "type": "isotime",
+            "units": "UTC",
+            "length": 24,
+            "fill": null
+        },
+        {
+            "name": "B1F1",
+            "type": "double",
+            "units": "nT",
+            "fill": "-1.0E31",
+            "description": "Magnetic field magnitude (1 sec)"
+        },
+        {
+            "name": "B1SDF1",
+            "type": "double",
+            "units": "nT",
+            "fill": "-1.0E31",
+            "description": "Standard deviation of B magnitude (1 sec)"
+        },
+        {
+            "name": "B1GSE",
+            "type": "double",
+            "units": "nT",
+            "fill": "-1.0E31",
+            "description": "Magnetic field vector in GSE cartesian coordinates (1 sec)",
+            "size": [
+                3
+            ]
+        },
+        {
+            "name": "B1SDGSE",
+            "type": "double",
+            "units": "nT",
+            "fill": "-1.0E31",
+            "description": "Standard deviation of B vector in GSE coordinates (1 sec)",
+            "size": [
+                3
+            ]
+        },
+        {
+            "name": "B1RTN",
+            "type": "double",
+            "units": "nT",
+            "fill": "-1.0E31",
+            "description": "Magnetic field vector in RTN cartesian coordinates (1 sec)",
+            "size": [
+                3
+            ]
+        },
+        {
+            "name": "B1SDRTN",
+            "type": "double",
+            "units": "nT",
+            "fill": "-1.0E31",
+            "description": "Standard deviation of B vector in RTN coordinates (1 sec)",
+            "size": [
+                3
+            ]
+        }
+    ],
+    "startDate": "2015-06-08T00:00:00Z",
+    "stopDate": "2022-04-17T23:59:59Z",
+    "resourceURL": "https://cdaweb.gsfc.nasa.gov/misc/NotesD.html#DSCOVR_H0_MAG",
+    "contact": "A. Koval @ UMBC, NASA/GSFC",
+    "x_server": "http://cdaweb.gsfc.nasa.gov/hapi",
+    "x_dataset": "DSCOVR_H0_MAG"
+}

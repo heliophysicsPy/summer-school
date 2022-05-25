@@ -1,0 +1,221 @@
+{
+    "HAPI": "3.0",
+    "status": {
+        "code": 1200,
+        "message": "OK"
+    },
+    "x_dataset": "SW_OPER_MAGA_LR_1B",
+    "x_datasetType": "SW_MAGx_LR_1B",
+    "startDate": "2013-11-25T11:02:52Z",
+    "stopDate": "2022-05-21T23:59:59Z",
+    "cadence": "PT1S",
+    "x_maxTimeSelection": "P5D",
+    "modificationDate": "2022-05-25T02:55:04.292Z",
+    "description": "Swarm A vector (VFM) and scalar (ASM) magnetic field measurements interpolated at 1Hz rate.",
+    "x_dataTerms": "This dataset is provided by the European Space Agency and it is subject to terms condition described in https://vires.services/data_terms.",
+    "resourceURL": "https://earth.esa.int/eogateway/missions/swarm/product-data-handbook/level-1b-product-definitions#MAGX_LR_1B_Product",
+    "parameters": [
+        {
+            "name": "Timestamp",
+            "description": "Time stamp",
+            "units": "UTC",
+            "type": "isotime",
+            "length": 24,
+            "x_standard": "UTC",
+            "x_epoch": "1970-01-01T00:00:00Z",
+            "x_unit": "ms",
+            "x_type": "int64",
+            "fill": null
+        },
+        {
+            "name": "Latitude",
+            "description": "Position in ITRF - Latitude",
+            "units": "deg",
+            "type": "double",
+            "x_type": "float64",
+            "fill": null
+        },
+        {
+            "name": "Longitude",
+            "description": "Position in ITRF - Longitude",
+            "units": "deg",
+            "type": "double",
+            "x_type": "float64",
+            "fill": null
+        },
+        {
+            "name": "Radius",
+            "description": "Position in ITRF - Radius",
+            "units": "m",
+            "type": "double",
+            "x_type": "float64",
+            "fill": null
+        },
+        {
+            "name": "F",
+            "description": "Magnetic field intensity",
+            "units": "nT",
+            "type": "double",
+            "x_type": "float64",
+            "fill": null
+        },
+        {
+            "name": "dF_AOCS",
+            "description": "Magnetic stray field correction intensity of AOCS magneto-torquer coils",
+            "units": "nT",
+            "type": "double",
+            "x_type": "float64",
+            "fill": null
+        },
+        {
+            "name": "dF_other",
+            "description": "Magnetic stray field correction intensity of all other sources",
+            "units": "nT",
+            "type": "double",
+            "x_type": "float64",
+            "fill": null
+        },
+        {
+            "name": "F_error",
+            "description": "Error estimate on magnetic field intensity",
+            "units": "nT",
+            "type": "double",
+            "x_type": "float64",
+            "fill": null
+        },
+        {
+            "name": "B_VFM",
+            "size": [
+                3
+            ],
+            "description": "Magnetic field vector, VFM frame",
+            "units": "nT",
+            "type": "double",
+            "x_type": "float64",
+            "fill": null
+        },
+        {
+            "name": "B_NEC",
+            "size": [
+                3
+            ],
+            "description": "Magnetic field vector, NEC frame",
+            "units": "nT",
+            "type": "double",
+            "x_type": "float64",
+            "fill": null
+        },
+        {
+            "name": "dB_Sun",
+            "size": [
+                3
+            ],
+            "description": "Magnetic stray field correction vector of Sun induced perturbation, VFM frame",
+            "units": "nT",
+            "type": "double",
+            "x_type": "float64",
+            "fill": null
+        },
+        {
+            "name": "dB_AOCS",
+            "size": [
+                3
+            ],
+            "description": "Magnetic stray field correction vector of AOCS magneto-torquer coils, VFM frame",
+            "units": "nT",
+            "type": "double",
+            "x_type": "float64",
+            "fill": null
+        },
+        {
+            "name": "dB_other",
+            "size": [
+                3
+            ],
+            "description": "Magnetic stray field correction vector of all other sources, VFM frame",
+            "units": "nT",
+            "type": "double",
+            "x_type": "float64",
+            "fill": null
+        },
+        {
+            "name": "B_error",
+            "size": [
+                3
+            ],
+            "description": "Error estimates on magnetic field, VFM frame",
+            "units": "nT",
+            "type": "double",
+            "x_type": "float64",
+            "fill": null
+        },
+        {
+            "name": "q_NEC_CRF",
+            "size": [
+                4
+            ],
+            "description": "Quaternion, transformation: NEC \u2190 CRF",
+            "units": null,
+            "type": "double",
+            "x_type": "float64",
+            "fill": null
+        },
+        {
+            "name": "Att_error",
+            "description": "Error estimates on attitude information",
+            "units": "mdeg",
+            "type": "double",
+            "x_type": "float64",
+            "fill": null
+        },
+        {
+            "name": "Flags_F",
+            "description": "Flags characterizing the magnetic field intensity measurement (F)",
+            "units": null,
+            "type": "integer",
+            "x_type": "uint8",
+            "fill": null
+        },
+        {
+            "name": "Flags_B",
+            "description": "Flags characterizing the magnetic field measurement",
+            "units": null,
+            "type": "integer",
+            "x_type": "uint8",
+            "fill": null
+        },
+        {
+            "name": "Flags_q",
+            "description": "Flags characterizing the attitude information",
+            "units": null,
+            "type": "integer",
+            "x_type": "uint8",
+            "fill": null
+        },
+        {
+            "name": "Flags_Platform",
+            "description": "Flags characterizing the S/C platform information",
+            "units": null,
+            "type": "integer",
+            "x_type": "uint16",
+            "fill": null
+        },
+        {
+            "name": "ASM_Freq_Dev",
+            "description": "ASM frequency calibration data deviation",
+            "units": null,
+            "type": "double",
+            "x_type": "float64",
+            "fill": null
+        },
+        {
+            "name": "SyncStatus",
+            "description": "Synchronization status",
+            "units": null,
+            "type": "integer",
+            "x_type": "uint16",
+            "fill": null
+        }
+    ],
+    "x_server": "https://vires.services/hapi"
+}

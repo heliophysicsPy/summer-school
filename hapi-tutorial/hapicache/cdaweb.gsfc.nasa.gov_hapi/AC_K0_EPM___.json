@@ -1,0 +1,71 @@
+{
+    "HAPI": "2.0",
+    "status": {
+        "code": 1200,
+        "message": "OK"
+    },
+    "parameters": [
+        {
+            "name": "Time",
+            "type": "isotime",
+            "units": "UTC",
+            "length": 24,
+            "fill": null
+        },
+        {
+            "name": "H_lo",
+            "type": "double",
+            "units": "1/(cm2 s ster MeV)",
+            "fill": "-1.0E31",
+            "description": "Proton Flux (0.48-0.97 MeV)"
+        },
+        {
+            "name": "Ion_very_lo",
+            "type": "double",
+            "units": "1/(cm2 s ster MeV)",
+            "fill": "-1.0E31",
+            "description": "Ion Flux (47-65 keV)"
+        },
+        {
+            "name": "Ion_lo",
+            "type": "double",
+            "units": "1/(cm2 s ster MeV)",
+            "fill": "-1.0E31",
+            "description": "Ion Flux (112-187 keV)"
+        },
+        {
+            "name": "Ion_mid",
+            "type": "double",
+            "units": "1/(cm2 s ster MeV)",
+            "fill": "-1.0E31",
+            "description": "Ion Flux (310-580 keV)"
+        },
+        {
+            "name": "Ion_hi",
+            "type": "double",
+            "units": "1/(cm2 s ster MeV)",
+            "fill": "-1.0E31",
+            "description": "Ion Flux (1060-1910 keV)"
+        },
+        {
+            "name": "Electron_lo",
+            "type": "double",
+            "units": "1/(cm2 s ster MeV)",
+            "fill": "-1.0E31",
+            "description": "Electron Flux (38-53 keV)"
+        },
+        {
+            "name": "Electron_hi",
+            "type": "double",
+            "units": "1/(cm2 s ster MeV)",
+            "fill": "-1.0E31",
+            "description": "Electron Flux (175-315 keV)"
+        }
+    ],
+    "startDate": "2017-07-01T00:00:00Z",
+    "stopDate": "2022-05-14T23:55:00Z",
+    "resourceURL": "https://cdaweb.gsfc.nasa.gov/misc/NotesA.html#AC_K0_EPM",
+    "contact": "R. Gold @ JHU Applied Physics Laboratory",
+    "x_server": "https://cdaweb.gsfc.nasa.gov/hapi",
+    "x_dataset": "AC_K0_EPM"
+}
