@@ -306,7 +306,6 @@ The canonical measure of the surface field, taking out effects of location and i
 
 ```python
 import glob
-os.environ['CDF_LIB'] = tutorial_data
 import spacepy.pycdf
 
 files = sorted(glob.glob(os.path.join(tutorial_data, 'hr_dst', 'ngp_dst_k0*_v00.cdf')))
