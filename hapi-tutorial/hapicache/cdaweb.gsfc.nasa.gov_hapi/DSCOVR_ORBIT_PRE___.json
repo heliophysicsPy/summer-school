@@ -1,0 +1,69 @@
+{
+    "HAPI": "2.0",
+    "status": {
+        "code": 1200,
+        "message": "OK"
+    },
+    "parameters": [
+        {
+            "name": "Time",
+            "type": "isotime",
+            "units": "UTC",
+            "length": 24,
+            "fill": null
+        },
+        {
+            "name": "SUN_R",
+            "type": "double",
+            "units": "km",
+            "fill": "-1.0E31",
+            "description": "Distance of Earth from Sun"
+        },
+        {
+            "name": "GCI_POS",
+            "type": "double",
+            "units": "km",
+            "fill": "-1.0E31",
+            "description": "S/C position vector in J2000 GCI coordinates",
+            "size": [
+                3
+            ]
+        },
+        {
+            "name": "GCI_VEL",
+            "type": "double",
+            "units": "km/sec",
+            "fill": "-1.0E31",
+            "description": "S/C velocity vector in J2000 GCI coordinates",
+            "size": [
+                3
+            ]
+        },
+        {
+            "name": "GSE_POS",
+            "type": "double",
+            "units": "km",
+            "fill": "-1.0E31",
+            "description": "S/C position vector in GSE coordinates",
+            "size": [
+                3
+            ]
+        },
+        {
+            "name": "MOON_GSE_POS",
+            "type": "double",
+            "units": "km",
+            "fill": "-1.0E31",
+            "description": "Moon position vector in GSE coordinates",
+            "size": [
+                3
+            ]
+        }
+    ],
+    "startDate": "2015-02-11T23:39:07Z",
+    "stopDate": "2022-06-22T12:00:00Z",
+    "resourceURL": "https://cdaweb.gsfc.nasa.gov/misc/NotesD.html#DSCOVR_ORBIT_PRE",
+    "contact": "A. Szabo @ NASA Goddard Space Flight Center",
+    "x_server": "http://cdaweb.gsfc.nasa.gov/hapi",
+    "x_dataset": "DSCOVR_ORBIT_PRE"
+}

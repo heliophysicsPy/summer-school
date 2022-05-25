@@ -1,0 +1,486 @@
+{
+    "startDate": "1959-01-01T00:00:00.000Z",
+    "stopDate": "2040-08-21T23:58:00.000Z",
+    "cadence": "PT60S",
+    "description": "Moon ephemeris",
+    "resourceURL": "https://sscweb.gsfc.nasa.gov/",
+    "parameters": [
+        {
+            "name": "Time",
+            "type": "isotime",
+            "units": "UTC",
+            "fill": null,
+            "length": 18
+        },
+        {
+            "name": "X_TOD",
+            "description": "X Position in the Geocentric Equatorial Inertial coordinate system, also known as True Equator and True Equinox of Date, True of Date TOD, ECI, or GCI",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Y_TOD",
+            "description": "Y Position in the Geocentric Equatorial Inertial coordinate system, also known as True Equator and True Equinox of Date, True of Date TOD, ECI, or GCI",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Z_TOD",
+            "description": "Z Position in the Geocentric Equatorial Inertial coordinate system, also known as True Equator and True Equinox of Date, True of Date TOD, ECI, or GCI",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Lat_TOD",
+            "description": "Lat Position in the Geocentric Equatorial Inertial coordinate system, also known as True Equator and True Equinox of Date, True of Date TOD, ECI, or GCI",
+            "units": "deg",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Lon_TOD",
+            "description": "Lon Position in the Geocentric Equatorial Inertial coordinate system, also known as True Equator and True Equinox of Date, True of Date TOD, ECI, or GCI",
+            "units": "deg",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "X_J2K",
+            "description": "X Position in the Geocentric Equatorial Inertial coordinate system for epoch J2000.0 GEI2000, also known as Mean Equator and Mean Equinox of J2000.0",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Y_J2K",
+            "description": "Y Position in the Geocentric Equatorial Inertial coordinate system for epoch J2000.0 GEI2000, also known as Mean Equator and Mean Equinox of J2000.0",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Z_J2K",
+            "description": "Z Position in the Geocentric Equatorial Inertial coordinate system for epoch J2000.0 GEI2000, also known as Mean Equator and Mean Equinox of J2000.0",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Lat_J2K",
+            "description": "Lat Position in the Geocentric Equatorial Inertial coordinate system for epoch J2000.0 GEI2000, also known as Mean Equator and Mean Equinox of J2000.0",
+            "units": "deg",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Lon_J2K",
+            "description": "Lon Position in the Geocentric Equatorial Inertial coordinate system for epoch J2000.0 GEI2000, also known as Mean Equator and Mean Equinox of J2000.0",
+            "units": "deg",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "X_GEO",
+            "description": "X Position in the Geographic coordinate system, also known as Greenwich Rotating Coordinates GRC, or Earth-fixed Greenwich EFG",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Y_GEO",
+            "description": "Y Position in the Geographic coordinate system, also known as Greenwich Rotating Coordinates GRC, or Earth-fixed Greenwich EFG",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Z_GEO",
+            "description": "Z Position in the Geographic coordinate system, also known as Greenwich Rotating Coordinates GRC, or Earth-fixed Greenwich EFG",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Lat_GEO",
+            "description": "Latitude in the Geographic coordinate system, also known as Greenwich Rotating Coordinates GRC, or Earth-fixed Greenwich EFG",
+            "units": "deg",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Lon_GEO",
+            "description": "Longitude in the Geographic coordinate system, also known as Greenwich Rotating Coordinates GRC, or Earth-fixed Greenwich EFG",
+            "units": "deg",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "LT_GEO",
+            "description": "Local time in the Geographic coordinate system, also known as Greenwich Rotating Coordinates GRC, or Earth-fixed Greenwich EFG",
+            "units": "$H:$M:$S",
+            "fill": "99:99:99",
+            "type": "string",
+            "length": 8
+        },
+        {
+            "name": "X_GM",
+            "description": "X Position in the Geomagnetic coordinate system.",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Y_GM",
+            "description": "Y Position in the Geomagnetic coordinate system.",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Z_GM",
+            "description": "Z Position in the Geomagnetic coordinate system.",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Lat_GM",
+            "description": "Latitude in the Geomagnetic coordinate system.",
+            "units": "deg",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Lon_GM",
+            "description": "Longigude in the Geomagnetic coordinate system.",
+            "units": "deg",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "LT_GM",
+            "description": "Local time in the Geomagnetic coordinate system.",
+            "units": "$H:$M:$S",
+            "fill": "99:99:99",
+            "type": "string",
+            "length": 8
+        },
+        {
+            "name": "X_GSE",
+            "description": "X Position in the Geocentric Solar Ecliptic coordinate system",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Y_GSE",
+            "description": "Y Position in the Geocentric Solar Ecliptic coordinate system",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Z_GSE",
+            "description": "Z Position in the Geocentric Solar Ecliptic coordinate system",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Lat_GSE",
+            "description": "Lat Position in the Geocentric Solar Ecliptic coordinate system",
+            "units": "deg",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Lon_GSE",
+            "description": "Lon Position in the Geocentric Solar Ecliptic coordinate system",
+            "units": "deg",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "LT_GSE",
+            "description": "LT Position in the Geocentric Solar Ecliptic coordinate system",
+            "units": "$H:$M:$S",
+            "fill": "99:99:99",
+            "type": "string",
+            "length": 8
+        },
+        {
+            "name": "X_GSM",
+            "description": "X Position in the Geocentric Solar Magnetospheric coordinate system",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Y_GSM",
+            "description": "Y Position in the Geocentric Solar Magnetospheric coordinate system",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Z_GSM",
+            "description": "Z Position in the Geocentric Solar Magnetospheric coordinate system",
+            "units": "deg",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Lat_GSM",
+            "description": "Lat Position in the Geocentric Solar Magnetospheric coordinate system",
+            "units": "deg",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Lon_GSM",
+            "description": "Lon Position in the Geocentric Solar Magnetospheric coordinate system",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "X_SM",
+            "description": "X Position in the Solar Magnetic coordinate system",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Y_SM",
+            "description": "Y Position in the Solar Magnetic coordinate system",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Z_SM",
+            "description": "Z Position in the Solar Magnetic coordinate system",
+            "units": "deg",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Lat_SM",
+            "description": "Latitude in the Solar Magnetic coordinate system",
+            "units": "deg",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Lon_SM",
+            "description": "Longitude in the Solar Magnetic coordinate system",
+            "units": "deg",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "LT_SM",
+            "description": "Local time in the Solar Magnetic coordinate system",
+            "units": "$H:$M:$S",
+            "fill": "99:99:99",
+            "type": "string",
+            "length": 8
+        },
+        {
+            "name": "Lat_N_Btrace_GEO",
+            "description": "Where the magnetic field line that passes through the spacecraft intersects the Earth's surface (at 100 km altitude) in the Earth's northern magnetic hemisphere. North B traced footpoint region assignments are the same as the 'North' regions and the Low Latitude region used for assigning a radial traced footpoint region. Lat (-90,+90), Long (0,360). Magnetic field model: Internal: IGRF, External Tsyganenko 89C Kp = 3-, 3, 3+.",
+            "units": "deg",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Lon_N_Btrace_GEO",
+            "description": "Where the magnetic field line that passes through the spacecraft intersects the Earth's surface (at 100 km altitude) in the Earth's northern magnetic hemisphere. North B traced footpoint region assignments are the same as the 'North' regions and the Low Latitude region used for assigning a radial traced footpoint region. Lat (-90,+90), Long (0,360). Magnetic field model: Internal: IGRF, External Tsyganenko 89C Kp = 3-, 3, 3+.",
+            "units": "deg",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "ArcLen_N_Btrace_GEO",
+            "description": "",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Lat_S_Btrace_GEO",
+            "description": "Where the magnetic field line that passes through the spacecraft intersects the Earth's surface (at 100 km altitude) in the Earth's southern magnetic hemisphere. South B traced footpoint region assignments are the same as the 'South' regions and the Low Latitude region used for assigning a radial traced footpoint region. Lat (-90,+90), Long (0,360). Magnetic field model: Internal: IGRF, External Tsyganenko 89C Kp = 3-, 3, 3+.",
+            "units": "deg",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Lon_S_Btrace_GEO",
+            "description": "Where the magnetic field line that passes through the spacecraft intersects the Earth's surface (at 100 km altitude) in the Earth's southern magnetic hemisphere. South B traced footpoint region assignments are the same as the 'South' regions and the Low Latitude region used for assigning a radial traced footpoint region. Lat (-90,+90), Long (0,360). Magnetic field model: Internal: IGRF, External Tsyganenko 89C Kp = 3-, 3, 3+.",
+            "units": "deg",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "ArcLen_S_Btrace_GEO",
+            "description": "",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Lat_N_Btrace_GM",
+            "description": "Where the magnetic field line that passes through the spacecraft intersects the Earth's surface (at 100 km altitude) in the Earth's northern magnetic hemisphere. North B traced footpoint region assignments are the same as the 'North' regions and the Low Latitude region used for assigning a radial traced footpoint region. Lat (-90,+90), Long (0,360). Magnetic field model: Internal: IGRF, External Tsyganenko 89C Kp = 3-, 3, 3+.",
+            "units": "deg",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Lon_N_Btrace_GM",
+            "description": "Where the magnetic field line that passes through the spacecraft intersects the Earth's surface (at 100 km altitude) in the Earth's northern magnetic hemisphere. North B traced footpoint region assignments are the same as the 'North' regions and the Low Latitude region used for assigning a radial traced footpoint region. Lat (-90,+90), Long (0,360). Magnetic field model: Internal: IGRF, External Tsyganenko 89C Kp = 3-, 3, 3+.",
+            "units": "deg",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "ArcLen_N_Btrace_GM",
+            "description": "",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Lat_S_Btrace_GM",
+            "description": "Where the magnetic field line that passes through the spacecraft intersects the Earth's surface (at 100 km altitude) in the Earth's southern magnetic hemisphere. South B traced footpoint region assignments are the same as the 'South' regions and the Low Latitude region used for assigning a radial traced footpoint region. Lat (-90,+90), Long (0,360). Magnetic field model: Internal: IGRF, External Tsyganenko 89C Kp = 3-, 3, 3+.",
+            "units": "deg",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Lon_S_Btrace_GM",
+            "description": "Where the magnetic field line that passes through the spacecraft intersects the Earth's surface (at 100 km altitude) in the Earth's southern magnetic hemisphere. South B traced footpoint region assignments are the same as the 'South' regions and the Low Latitude region used for assigning a radial traced footpoint region. Lat (-90,+90), Long (0,360). Magnetic field model: Internal: IGRF, External Tsyganenko 89C Kp = 3-, 3, 3+.",
+            "units": "deg",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "ArcLen_S_Btrace_GM",
+            "description": "",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Radius",
+            "description": "Distance spacecraft is from Earth for each given point in time",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "MagneticFldStrth",
+            "description": "Magnetic field magnitude at location of spacecraft (using IGRF + T89C with Kp: 3-, 3, 3+)",
+            "units": "nT",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "dNeutS",
+            "description": "The distance a spacecraft is from the neutral sheet for each given point in time. (The employed model of the neutral sheet is that which was provided by Tsyganenko (1995)). See also https://sscweb.gsfc.nasa.gov/users_guide/ssc_reg_doc.shtml",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "dBowShk",
+            "description": "The distance a spacecraft is from the bow shock for each given point in time. See also https://sscweb.gsfc.nasa.gov/users_guide/ssc_reg_doc.shtml",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "dMpause",
+            "description": "The distance a spacecraft is from the magnetopause for each given point in time. See also https://sscweb.gsfc.nasa.gov/users_guide/ssc_reg_doc.shtml",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "DipL-V",
+            "description": "Dipole L-value at location of spacecraft. Magnetic field model: Internal: IGRF, External Tsyganenko 89C Kp = 3-, 3, 3+.",
+            "units": "dimensionless",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "DipInv",
+            "description": "Dipole invariant latitude at location of spacecraft. Lat (-90,+90), Long(0,360). Magnetic field model: Internal: IGRF, External Tsyganenko 89C Kp = 3-, 3, 3+.",
+            "units": "deg",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "Spacecraft_Region",
+            "description": "Such a region (3-dimensional zone) is based on the spacecraft's position within the magnetosphere. A spacecraft can occupy only one region of this region type at any given time. A spacecraft region assignment can be one of the following: Interplanetary medium, Dayside Magnetosheath, Nightside Magnetosheath, Dayside Magnetosphere, Nightside Magnetosphere, Dayside Plasmasphere, Nightside Plasmasphere, Plasma Sheet, Tail Lobe, LLBL (Low Latitude Boundry Layer), HLBL (High Latitude Boundry Layer - formerly known as the Mantle)",
+            "units": "dimensionless",
+            "fill": null,
+            "type": "string",
+            "length": 32
+        },
+        {
+            "name": "Radial_Trc_Region",
+            "description": "Such a region (2-dimensional zone) is based on the location on the Earth's surface where a straight line would intersect when connecting the spacecraft and the Earth's center. A radial traced region assignment can be one of the following: North Polar Cap, South polar Cap, North Cusp, South Cusp, North Cleft, South Cleft, North Auroral Oval, South Auroral Oval, North Mid-Latitude, South Mid-Latitude, Low Latitude. Note: The North and South Mid-Latitude regions are defined as the two bands about the Earth that extend from +30 degrees latitude to the North Auroral Oval, and -30 degrees latitude to the South Auroral Oval. The Low-Latitude is the band that extends from +30 degrees latitude to -30 degrees latitude. See also https://sscweb.gsfc.nasa.gov/users_guide/ssc_reg_doc.shtml",
+            "units": "dimensionless",
+            "fill": null,
+            "type": "string",
+            "length": 32
+        },
+        {
+            "name": "N_BTraced_Region",
+            "description": "Such a region (2-dimensional zone) is based on where the magnetic field line that passes through the spacecraft intersects the Earth's surface (at 100 km altitude)  in the Earth's northern magnetic hemisphere. North B traced footpoint region assignments are the same as the 'North' regions and the Low Latitude region used for assigning a radial traced footpoint region. Magnetic field model: Internal: IGRF, External Tsyganenko 89C Kp = 3-, 3, 3+. See also https://sscweb.gsfc.nasa.gov/users_guide/ssc_reg_doc.shtml",
+            "units": "dimensionless",
+            "fill": "None",
+            "type": "string",
+            "length": 32
+        },
+        {
+            "name": "S_BTraced_Region",
+            "description": "Such a region (2-dimensional zone) is based on where the magnetic field line that passes through the spacecraft intersects the Earth's surface (at 100 km altitude) in the Earth's southern magnetic hemisphere. South B traced footpoint region assignments are the same as the 'South' regions and the Low Latitude region used for assigning a radial traced footpoint region. Magnetic field model: Internal: IGRF, External Tsyganenko 89C Kp = 3-, 3, 3+. See also https://sscweb.gsfc.nasa.gov/users_guide/ssc_reg_doc.shtml",
+            "units": "dimensionless",
+            "fill": "None",
+            "type": "string",
+            "length": 32
+        },
+        {
+            "name": "GSE_Magnetic_Vector_X",
+            "description": "",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "GSE_Magnetic_Vector_Y",
+            "description": "",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        },
+        {
+            "name": "GSE_Magnetic_Vector_Z",
+            "description": "",
+            "units": "R_E",
+            "fill": "1e31",
+            "type": "double"
+        }
+    ],
+    "HAPI": "2.0",
+    "status": {
+        "code": 1200,
+        "message": "OK"
+    },
+    "x_server": "https://hapi-server.org/servers/SSCWeb/hapi",
+    "x_dataset": "moon"
+}
