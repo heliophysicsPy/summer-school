@@ -12,6 +12,21 @@
 * Very favorable configuration of several different satellites: SDO, STEREO, SolO, PSP
 
 
+## Will's TODOs
+
+- [x] Add coordinates intro to Part 3
+- [x] Add reproject example to Part 3
+- [x] Move resample code to Part 4
+- [x] Remove timeseries truncation
+- [x] Use HGS coordinates for cropping (crop only stereo and AIA)
+- [x] Add description to README
+- [ ] Test all notebooks on heliocloud
+- [ ] Move all sample data to shared on heliocloud
+- [ ] Separate notebooks for instructor and student
+- [ ] Remove this file
+- [ ] Commit/merge everything
+
+
 ## Outline
 
 * NB1: Data download
