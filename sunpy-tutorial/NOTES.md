@@ -12,15 +12,31 @@
 * Very favorable configuration of several different satellites: SDO, STEREO, SolO, PSP
 
 
+## Will's TODOs
+
+- [x] Add coordinates intro to Part 3
+- [x] Add reproject example to Part 3
+- [x] Move resample code to Part 4
+- [x] Remove timeseries truncation
+- [x] Use HGS coordinates for cropping (crop only stereo and AIA)
+- [x] Add description to README
+- [ ] Test all notebooks on heliocloud
+- [ ] Move all sample data to shared on heliocloud
+- [ ] Separate notebooks for instructor and student
+- [ ] Remove this file
+- [ ] Commit/merge everything
+
+
 ## Outline
 
 * NB1: Data download
   * Query data from (may want to pare this down somewhat)
     - AIA
+    - ~~SWAP~~
     - HMI (synoptic, for field extrapolation)
     - STEREO A
     - GOES (show that the flare went off)
-    - LASCO C2
+    - ~~LASCO C2~~
     - EUI
     - EPD (timeseries, need to figure out which measurements are interesting here, if any; even if not, maybe just good to show that we can look at timeseries data from SolO)
   * Show off features of Fido
@@ -33,6 +49,10 @@
     - Do the usual API walk through, show derived properties and nice plotting/repr functionality
     - Plot all of the other images
     - Make a movie from our series of images from SolO
+    - show off uniformity of the API across image data sources--"treat all your data sources the same"
+    - show off plot_coord
+    - make a movie of the CME with the EUI data
+    - tease coordinates with the observer location property
   * Show off features of TimeSeries
     - Plot GOES
     - Show API, plotting, repr
